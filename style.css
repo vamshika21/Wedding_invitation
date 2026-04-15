@@ -259,9 +259,17 @@ body.no-scroll {
     text-align: center;
     color: #F5E6D3;
     overflow: visible;
+    opacity: 0;
+    transform: scale(1.12);
+    transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1), opacity 1s ease-out;
 }
 
 
+
+body.hero-visible .hero {
+    opacity: 1;
+    transform: scale(1);
+}
 
 .hero-overlay {
     position: absolute;
@@ -278,6 +286,15 @@ body.no-scroll {
     z-index: 3;
     margin-top: auto;
     width: 100%;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.9s ease-out 0.7s, transform 0.9s ease-out 0.7s;
+}
+
+body.hero-visible .hero-content {
+    opacity: 1;
+    transform: translateY(0);
+
 }
 
 .hero-content h3 {

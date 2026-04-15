@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // audio.play().catch(err => console.log("Music play blocked by browser"));
             setTimeout(() => {
                 overlay.style.display = 'none';
+                document.body.classList.add('hero-visible');
                 AOS.refresh();
             }, 1000);
         });
